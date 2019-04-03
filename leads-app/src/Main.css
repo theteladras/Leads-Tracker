@@ -1,0 +1,315 @@
+body {
+    background-color: rgb(185, 233, 252);
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-title {
+    font-size: 1rem;
+    color: rgb(20, 172, 96);
+    text-shadow: 0px 2px 4px rgb(83, 83, 152);
+    text-align: center;
+    width: 90%;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 450px;
+    width: 350px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px black;
+}
+
+.login-card:hover {
+    box-shadow: 4px 10px 10px black;
+}
+
+.login-title-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-title-container {
+    align-items: center;
+}
+
+.signin-title {
+    text-align: center;
+}
+
+.signin-paragraph {
+    text-align: center;
+    height: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.login-input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 60%;
+    height: 25px;
+    align-self: center;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    color: white;
+}
+
+.login-btn-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login-btn {
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+}
+
+.signup-btn-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.signup-btn {
+    background-color: green;
+    color: white;
+    width: 140px;
+    font-size: 1rem;
+}
+
+.cancel {
+    background-color: red;
+}
+
+.input-container {
+    flex: 2;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.input-sub-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flanker {
+    height: 10vh;
+}
+
+.error-report {
+    text-align: center;
+    color: red;
+    height: 40px;
+}
+
+.login-instruction {
+    text-align: center;
+}
+
+.partner-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-width: 140px;
+}
+
+.partner-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 90%;
+    border-bottom: 2px solid rgb(112, 204, 240);
+    border-right: 1px solid rgb(112, 204, 240);
+    height: 40px;
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.partner-text:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-btn-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-btn {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+}
+
+.modal-btn:hover {
+    height: 150px;
+    width: 150px;
+}
+
+.modal-icon-holder {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    padding: 10px;
+}
+
+.modal-icon-holder:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.modal-icon-holder:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.close-icon-modal {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.user-btn {
+    background-color: cadetblue;
+    color: white;
+}
+
+.user-btn:hover {
+    color: black;
+}
+
+.company-btn {
+    background-color: darkseagreen;
+    color: white;
+}
+
+.company-btn:hover {
+    color: black;
+}
+
+.back-icon-modal {
+    width: 30px;
+    height: 30px;
+}
+
+.label-category {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.select-category {
+    margin-left: 10px;
+    width: 90px;
+    color: white;
+    height: 25px;
+    position: relative;
+    top: -3px;
+}
+
+.gender-label {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gender-selector {
+    color: black;
+    height: 30px;
+    width: 90px;
+    position: relative;
+    top: 5px;
+}
+
+.input-label {
+    position: relative;
+    top: 5px;
+}
+
+.modal-error-msg {
+    flex: 0.1;
+    position: relative;
+    top: -50px;
+    color: red;
+    font-size: 12px;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.arrow {
+    position: relative;
+    font-size: 14px;
+    top: -2px;
+    width: 10px;
+}
+
+.overview-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.back_from_overview {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.overview-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

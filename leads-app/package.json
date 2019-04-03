@@ -1,0 +1,38 @@
+{
+  "name": "leads-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@blueprintjs/core": "^3.14.1",
+    "@blueprintjs/docs-theme": "^3.0.4",
+    "@blueprintjs/table": "^3.4.1",
+    "apollo-boost": "^0.3.1",
+    "graphql": "^14.2.0",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.4",
+    "react-apollo": "^2.5.3",
+    "react-dom": "^16.8.4",
+    "react-input-switch": "^2.1.16",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
+  }
+}
