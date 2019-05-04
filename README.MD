@@ -1,16 +1,16 @@
 ###INSTALACIJA:
 
-markup : `\$ git clone https://github.com/theteladras/Leads-Tracker.git`
+`\$ git clone https://github.com/theteladras/Leads-Tracker.git`
 
-markup : `\$ cd Leads-Tracker/`
+`\$ cd Leads-Tracker/`
 
-markup : `\$ npm i`
+`\$ npm i`
 
-markup : `\$ cd leads-app/`
+`\$ cd leads-app/`
 
-markup : `\$ npm i`
+`\$ npm i`
 
-markup : `\$ cd ..`
+`\$ cd ..`
 
 Za pokretanje aplikacije:
 
@@ -22,9 +22,9 @@ Za pokretanje aplikacije:
 
 ###Hijerarhija upravljanja aplikacijom:
 
-Markup : * ADMIN - svaki registrovani korisnik je admin svoje list, sto znaci da svoju listu moze da uredjuje u potpunosti.
-Markup : * MANAGER - manager je registrovani korisnik koji je dobio ovlascenje da uredjuje partnersku listu. I njega postavlja vlasnik svoje liste (ADMIN).
-Markup : * USER - user je svaki registrovani korisnik koji gleda partnersku listu, odnosno nema mogucnost da menja tu listu.
+* ADMIN - svaki registrovani korisnik je admin svoje list, sto znaci da svoju listu moze da uredjuje u potpunosti.
+* MANAGER - manager je registrovani korisnik koji je dobio ovlascenje da uredjuje partnersku listu. I njega postavlja vlasnik svoje liste (ADMIN).
+* USER - user je svaki registrovani korisnik koji gleda partnersku listu, odnosno nema mogucnost da menja tu listu.
 
 PARTNER - sve kompanije koje pomenu / navedu na svojoj listi nekog usera.
 
@@ -46,13 +46,13 @@ test@test.com
 
 ###FICHERI
 
-Markup : * Autentikacija ( error handling, success handling, navigating... )
-Markup : * Dodavanje lead-a (unosom parametara ili za user ili company lead).
-Markup : * Editovanje svakog lead-a.
-Markup : * Brisanje leadova.
-Markup : * Promocija u menager-a.
-Markup : * Sortiranje leadov-a po alphabetu imena ili po datumu postavljanja.
-Markup : * Promena kategorije svakog lead-a.
-Markup : * Logoutovanje...
-Markup : * Partner view.
+* Autentikacija ( error handling, success handling, navigating... )
+* Dodavanje lead-a (unosom parametara ili za user ili company lead).
+* Editovanje svakog lead-a.
+* Brisanje leadova.
+* Promocija u menager-a.
+* Sortiranje leadov-a po alphabetu imena ili po datumu postavljanja.
+* Promena kategorije svakog lead-a.
+* Logoutovanje...
+* Partner view.
 ...
