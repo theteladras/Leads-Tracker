@@ -9,6 +9,7 @@ import OK_ICON from "../Assets/ok.png";
 
 class ListItem extends Component {
   state = {
+    item_id: "",
     name_input: false,
     surname_input: false,
     contact_input: false,
@@ -31,6 +32,7 @@ class ListItem extends Component {
 
   componentDidMount() {
     this.setState({
+      item_id: this.props.item._id,
       category: this.props.item.category,
       switch: this.props.personal_data
         ? this.props.personal_data.managers.includes(this.props.item.email) && 1
@@ -66,7 +68,13 @@ class ListItem extends Component {
           <div className="label-data-container">
             <div />
             <div className="data-style">
-              <p>{`${this.props.item[args.prop_name]}`}</p>
+              {args.prop_name === "web" ? (
+                <a href={`${this.props.item[args.prop_name]}`}>{`${
+                  this.props.item[args.prop_name]
+                }`}</a>
+              ) : (
+                <p>{`${this.props.item[args.prop_name]}`}</p>
+              )}
             </div>
             {this.renderEditIcon(args)}
           </div>
@@ -229,11 +237,12 @@ class ListItem extends Component {
                 this.setState({ category: noter_label });
                 try {
                   const added_lead = await client.mutate({
-                    mutation: this.props.item.gender
-                      ? UPDATE_USER_LEAD
-                      : UPDATE_COMPANY_LEAD,
+                    mutation:
+                      this.props.item.gender === null
+                        ? UPDATE_COMPANY_LEAD
+                        : UPDATE_USER_LEAD,
                     variables: {
-                      _id: this.props.item._id,
+                      _id: this.state.item_id,
                       category: noter_label
                     }
                   });
@@ -393,6 +402,7 @@ const UPDATE_COMPANY_LEAD = gql`
     $category: String
   ) {
     editCompanyLead(
+      _id: $_id
       name: $name
       contact: $contact
       email: $email

@@ -10,15 +10,14 @@ export default function DeleteButton(props) {
         <div
           className={`delete-holder ${props.is_manager && "delete-overview"}`}
           onClick={async () => {
+            console.log(props.personal_data._id);
             try {
               const added_lead = await client.mutate({
                 mutation: props.item.gender
                   ? DELETE_USER_LEAD
                   : DELETE_COMPANY_LEAD,
                 variables: {
-                  _id: props.is_manager
-                    ? props.item._id
-                    : props.personal_data._id
+                  _id: props.item._id
                 }
               });
               if (added_lead.data) {
