@@ -22,7 +22,11 @@ const UserSchema = mongoose.Schema(
         phone: {
             type: String,
             require: true,
-            minlength: 6
+            minlength: 6,
+            validate: {
+                validator: validator.isMobilePhone,
+                message: '{VALUE} is not a valid email address'
+            }
         },
         email: {
             type: String,
