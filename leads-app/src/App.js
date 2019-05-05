@@ -11,7 +11,8 @@ class App extends PureComponent {
 
   componentDidMount() {
     let obj = localStorage.getItem("login_data");
-    if (obj !== "null") {
+    console.log(obj);
+    if (obj !== "null" && obj) {
       this.setState({ choice: 2, content: JSON.parse(obj) });
     }
   }
