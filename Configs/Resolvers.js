@@ -59,7 +59,7 @@ module.exports =  {
             return user;
         },
         async editUser(parent, args, { UserSchema }) {
-            let edited_user = await UserSchema.findOneAndUpdate({  _id: args._id }, {$set: args}, {new: true});
+            let edited_user = await UserSchema.findOneAndUpdate({  _id: args._id }, {$set: args}, {new: true, runValidators: true});
             return edited_user;
         },
         async createCompanyLead(parent, args, { UserSchema }) {
@@ -68,7 +68,7 @@ module.exports =  {
             return user;
         },
         async editCompanyLead(parent, args, { CompanySchema }) {
-            let edited_company = await CompanySchema.findOneAndUpdate({  _id: args._id }, {$set: args}, {new: true});
+            let edited_company = await CompanySchema.findOneAndUpdate({  _id: args._id }, {$set: args}, {new: true, runValidators: true});
             return edited_company;
         },
         async createCompanyLead(parent, args, { CompanySchema }) {

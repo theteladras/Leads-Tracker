@@ -17,7 +17,12 @@ const CompanySchema = mongoose.Schema(
         },
         phone: {
             type: String,
-            require: true
+            require: true,
+            minlength: 6,
+            validate: {
+                validator: validator.isMobilePhone,
+                message: '{VALUE} is not a valid email address'
+            }
         },
         web: {
             type: String,

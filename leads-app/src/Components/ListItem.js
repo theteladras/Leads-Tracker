@@ -116,6 +116,7 @@ class ListItem extends Component {
           onChange={val =>
             this.setState({ [args.state_input_value]: val.target.value })
           }
+          onFocus={() => this.setState({ error: false })}
         />
       );
     }
@@ -280,9 +281,20 @@ class ListItem extends Component {
     }
   };
 
+  renderError = () => {
+    if (this.state.error) {
+      return (
+        <p className="error-msg">
+          There was an error while updating the field.
+        </p>
+      );
+    }
+  };
+
   render() {
     return (
       <div className="list-item">
+        {this.renderError()}
         {this.renderSwitch()}
         {this.renderDeleteBtn()}
         <div
